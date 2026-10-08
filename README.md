@@ -57,26 +57,30 @@ Início ................ pesquisa, cursos e praias em destaque, sobre e FAQ
 
 ## Esquemas 
 
-- Inicio . Mobile
+- **Inicio: Mobile**
+
 ![Início · Mobile](mockups/inicio-mobile.png)
 
-- Inicio . Desktop
+- **Inicio: Desktop**
+
 ![Início · Desktop](mockups/inicio-desktop.png)
 
-- Praias . Mobile
+- **Praias: Mobile**
+
 ![Praias · Mobile](mockups/praias-mobile.png)
 
-- Praias . Desktop
+- **Praias: Desktop**
+
 ![Praias · Desktop](mockups/praias-desktop.png)
 
-## Ficheiros
 
-| Ficheiro | Conteúdo |
+## Referências
+| Nome | Site |
 |---|---|
-| `index.html` | Estrutura base, cabeçalho fixo e rodapé |
-| `style.css` | Estilos e responsividade |
-| `data.js` | Dados: praias, cursos, vagas, FAQ, quiz (editar aqui) |
-| `core.js` | Utilitários, armazenamento local, ilustrações SVG e cálculos |
-| `app.js` | Páginas, router por `#/rota` e interações |
-| `mockups/` | Esquemas draw.io e PNG |
-| `assets/logo.png` | Logótipo |
+| Instituto de Socorros a Náufragos / Autoridade Marítima Nacional | https://www.amn.pt |
+| APA · Infopraia | https://infopraia.apambiente.pt |
+| RNLI · Beach safety | https://rnli.org |
+| Surf Life Saving Australia · Beachsafe | https://beachsafe.org.au |
+| European Resuscitation Council · Guidelines | https://cprguidelines.eu |
+| Unsplash | https://unsplash.com |
+| draw.io (diagrams.net) | https://app.diagrams.net |
