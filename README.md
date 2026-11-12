@@ -47,6 +47,7 @@ HTML5 e Tailwind CSS (versão browser).
 
 **Estado do projeto**
 E1: grupo, descrição e mockups. E2: estrutura em HTML e responsividade (4 páginas). E3 (a fazer): JavaScript, PHP e base de dados.
+Após analisar o funcionamento real do mercado, o grupo simplificou o conceito inicial para uma plataforma de anúncios, mais realista e exequível.
 
 **Extras**
 - Recomendador de curso, simulador de data/hora de vigilância e planeador de visita à praia.
