@@ -47,7 +47,7 @@
     <section class="bg-sky-100">
       <div class="max-w-5xl mx-auto px-4 py-12 md:py-20">
         <h1 class="text-3xl md:text-5xl font-bold text-blue-900">Liga quem forma, quem contrata e quem salva vidas.</h1>
-        <p class="mt-4 max-w-xl">Encontra cursos de várias entidades formadoras, consulta praias seguras e perigosas e pede nadadores-salvadores para praias, piscinas, hotéis e eventos.</p>
+        <p class="mt-4 max-w-xl">Encontra cursos de várias entidades formadoras e vagas de nadador-salvador publicadas por concessionários, tudo organizado num só sítio.</p>
 
         <!-- flex-col: botões em coluna no telemóvel; sm:flex-row: lado a lado a partir de 640px -->
         <div class="mt-6 flex flex-col sm:flex-row gap-3">
@@ -70,8 +70,8 @@
           cursos publicados
         </li>
         <li class="bg-blue-900 text-white rounded-lg p-4">
-          <strong class="block text-2xl">31</strong>
-          praias no mapa
+          <strong class="block text-2xl">6</strong>
+          anúncios de vagas
         </li>
         <li class="bg-blue-900 text-white rounded-lg p-4">
           <strong class="block text-2xl">4</strong>
@@ -147,52 +147,53 @@
 
       </div>
       <p class="text-center mt-6">
-        <a href="cursos.html" class="inline-block border-2 border-blue-700 text-blue-700 font-semibold px-6 py-2 rounded-lg">Ver os 7 cursos →</a>
+        <a href="cursos.html" class="inline-block border-2 border-blue-700 text-blue-700 font-semibold px-6 py-2 rounded-lg">Ver os 6 cursos →</a>
       </p>
     </section>
 
-    <!-- ===== PRAIAS ===== -->
+    <!-- ===== VAGAS EM DESTAQUE =====
+         Os 3 cartões são o mesmo bloco com texto diferente.
+         md:grid-cols-3 → 1 coluna no telemóvel, 3 a partir de 768px -->
     <section class="max-w-5xl mx-auto px-4 pb-10">
-      <h2 class="text-2xl font-bold text-blue-700 text-center mb-6">Praias: onde ir e onde ter cuidado</h2>
-      <!-- Duas listas lado a lado a partir de md (768px) -->
-      <div class="grid gap-6 md:grid-cols-2">
-        <div>
-          <h3 class="font-bold text-green-700 mb-2">Mais seguras</h3>
-          <ul class="space-y-2">
-            <li class="flex justify-between items-center border border-slate-200 rounded px-3 py-2">
-              Praia da Conceição
-              <span class="bg-green-700 text-white text-xs font-bold px-2 py-1 rounded">Muito segura</span>
-            </li>
-            <li class="flex justify-between items-center border border-slate-200 rounded px-3 py-2">
-              Praia da Figueirinha
-              <span class="bg-green-700 text-white text-xs font-bold px-2 py-1 rounded">Muito segura</span>
-            </li>
-            <li class="flex justify-between items-center border border-slate-200 rounded px-3 py-2">
-              Praia Dona Ana
-              <span class="bg-green-700 text-white text-xs font-bold px-2 py-1 rounded">Muito segura</span>
-            </li>
+      <h2 class="text-2xl font-bold text-blue-700 text-center mb-6">Vagas em destaque</h2>
+      <div class="grid gap-6 md:grid-cols-3">
+
+        <article class="border border-slate-200 rounded-lg p-4">
+          <h3 class="font-bold text-blue-700">Costa da Caparica</h3>
+          <p class="text-sm text-slate-500">Almada · Lisboa e Setúbal</p>
+          <p class="mt-2 text-sm">Concessionário: Concessão Mar de Prata</p>
+          <ul class="mt-3 flex flex-wrap gap-2 text-xs">
+            <li class="bg-sky-100 rounded px-2 py-1">4 vagas</li>
+            <li class="bg-slate-100 rounded px-2 py-1">Época: 15/06 a 15/09</li>
           </ul>
-        </div>
-        <div>
-          <h3 class="font-bold text-red-600 mb-2">Mais perigosas</h3>
-          <ul class="space-y-2">
-            <li class="flex justify-between items-center border border-slate-200 rounded px-3 py-2">
-              Praia do Norte
-              <span class="bg-red-800 text-white text-xs font-bold px-2 py-1 rounded">Muito perigosa</span>
-            </li>
-            <li class="flex justify-between items-center border border-slate-200 rounded px-3 py-2">
-              Supertubos
-              <span class="bg-red-600 text-white text-xs font-bold px-2 py-1 rounded">Perigosa</span>
-            </li>
-            <li class="flex justify-between items-center border border-slate-200 rounded px-3 py-2">
-              Praia do Guincho
-              <span class="bg-red-600 text-white text-xs font-bold px-2 py-1 rounded">Perigosa</span>
-            </li>
+          <a href="contactos.html" class="inline-block mt-4 bg-red-600 text-white text-sm font-semibold px-4 py-2 rounded-lg">Candidatar-me</a>
+        </article>
+
+        <article class="border border-slate-200 rounded-lg p-4">
+          <h3 class="font-bold text-blue-700">Praia do Guincho</h3>
+          <p class="text-sm text-slate-500">Cascais · Lisboa e Setúbal</p>
+          <p class="mt-2 text-sm">Concessionário: Apoio de Praia Sol Nascente</p>
+          <ul class="mt-3 flex flex-wrap gap-2 text-xs">
+            <li class="bg-sky-100 rounded px-2 py-1">2 vagas</li>
+            <li class="bg-slate-100 rounded px-2 py-1">Época: 01/07 a 31/08</li>
           </ul>
-        </div>
+          <a href="contactos.html" class="inline-block mt-4 bg-red-600 text-white text-sm font-semibold px-4 py-2 rounded-lg">Candidatar-me</a>
+        </article>
+
+        <article class="border border-slate-200 rounded-lg p-4">
+          <h3 class="font-bold text-blue-700">Praia Dona Ana</h3>
+          <p class="text-sm text-slate-500">Lagos · Algarve</p>
+          <p class="mt-2 text-sm">Concessionário: Concessionário Costa Branca</p>
+          <ul class="mt-3 flex flex-wrap gap-2 text-xs">
+            <li class="bg-sky-100 rounded px-2 py-1">3 vagas</li>
+            <li class="bg-slate-100 rounded px-2 py-1">Época: 15/05 a 30/09</li>
+          </ul>
+          <a href="contactos.html" class="inline-block mt-4 bg-red-600 text-white text-sm font-semibold px-4 py-2 rounded-lg">Candidatar-me</a>
+        </article>
+
       </div>
       <p class="text-center mt-6">
-        <a href="praias.html" class="inline-block bg-sky-500 text-white font-semibold px-8 py-3 rounded-lg">Ver todas as praias</a>
+        <a href="praias.html" class="inline-block border-2 border-blue-700 text-blue-700 font-semibold px-6 py-2 rounded-lg">Ver todas as vagas →</a>
       </p>
     </section>
 
@@ -224,8 +225,8 @@
           <p class="mt-2">Depende da entidade formadora. Costuma haver uma prova de admissão na piscina.</p>
         </details>
         <details class="border border-slate-200 rounded px-4 py-3">
-          <summary class="cursor-pointer font-semibold">Como é calculado o número de nadadores-salvadores?</summary>
-          <p class="mt-2">Depende da extensão da zona vigiada e do número de banhistas esperado.</p>
+          <summary class="cursor-pointer font-semibold">Quem pode publicar vagas?</summary>
+          <p class="mt-2">Os concessionários de praias, piscinas, hotéis e eventos. A AquaGuard não contrata: liga quem precisa de nadadores-salvadores a quem procura trabalho.</p>
         </details>
       </div>
     </section>
