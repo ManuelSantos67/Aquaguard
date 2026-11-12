@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <!-- viewport: faz o telemóvel usar a largura real do ecrã (necessário para a página ser responsiva) -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contactos e formulário de mensagem da AquaGuard.">
+  <title>AquaGuard | Contactos</title>
+
+  <!-- Tailwind CSS: lê as classes escritas no HTML e gera o CSS no browser (precisa de internet) -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-white text-slate-800">
+
+  <!-- ===== AVISO DE EMERGÊNCIA =====
+       hidden md:inline → o texto extra fica escondido no telemóvel
+       e só aparece a partir dos 768px (md) -->
+  <p class="bg-red-600 text-white text-center text-sm font-semibold px-4 py-2">
+    Em perigo na água? Ligue 112
+    <span class="hidden md:inline">· Nunca entre no mar sozinho nem fora da zona vigiada</span>
+  </p>
+
+  <!-- ===== CABEÇALHO =====
+       sticky top-0 → fica preso no topo quando se faz scroll
+       flex-col (telemóvel): logótipo em cima, menu por baixo
+       md:flex-row md:justify-between (a partir de 768px): logótipo à esquerda, menu à direita -->
+  <header class="sticky top-0 z-10 bg-blue-700 text-white">
+    <div class="max-w-5xl mx-auto px-4 py-3 flex flex-col items-center gap-2 md:flex-row md:justify-between">
+      <a href="index.html" class="text-xl font-bold">AquaGuard</a>
+
+      <nav aria-label="Navegação principal">
+        <ul class="flex gap-4">
+          <li><a href="index.html" class="hover:underline">Início</a></li>
+          <li><a href="cursos.html" class="hover:underline">Cursos</a></li>
+          <li><a href="praias.html" class="hover:underline">Praias</a></li>
+          <li><a href="contactos.html" aria-current="page" class="font-bold underline">Contactos</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===== TÍTULO DA PÁGINA ===== -->
+    <section class="bg-sky-100">
+      <div class="max-w-5xl mx-auto px-4 py-10">
+        <h1 class="text-3xl font-bold text-blue-900">Contactos</h1>
+        <p class="mt-2 max-w-xl">Escreve-nos pelo formulário e respondemos por e-mail.</p>
+      </div>
+    </section>
+
+    <section class="max-w-2xl mx-auto px-4 py-10">
+
+      <!-- Formulário. Cada <label for="x"> liga-se ao campo com id="x".
+           space-y-4 → espaço vertical entre os filhos diretos.
+           required → o browser não deixa enviar com o campo vazio.
+           Ainda não envia nada para lado nenhum (action="#"); a parte do servidor vem mais tarde. -->
+      <form action="#" method="post" class="space-y-4">
+        <div>
+          <label for="nome" class="block font-semibold mb-1">Nome</label>
+          <input id="nome" name="nome" type="text" required class="w-full border border-slate-300 rounded-lg px-3 py-2">
+        </div>
+        <div>
+          <label for="email" class="block font-semibold mb-1">E-mail</label>
+          <input id="email" name="email" type="email" required class="w-full border border-slate-300 rounded-lg px-3 py-2">
+        </div>
+        <div>
+          <label for="assunto" class="block font-semibold mb-1">Assunto</label>
+          <select id="assunto" name="assunto" class="w-full border border-slate-300 rounded-lg px-3 py-2 bg-white">
+            <option>Sou entidade formadora</option>
+            <option>Preciso de nadadores-salvadores</option>
+            <option>Sou nadador-salvador</option>
+            <option>Outro</option>
+          </select>
+        </div>
+        <div>
+          <label for="mensagem" class="block font-semibold mb-1">Mensagem</label>
+          <textarea id="mensagem" name="mensagem" rows="5" required class="w-full border border-slate-300 rounded-lg px-3 py-2"></textarea>
+        </div>
+        <button type="submit" class="bg-red-600 text-white font-semibold px-6 py-3 rounded-lg">Enviar mensagem</button>
+      </form>
+
+    </section>
+
+  </main>
+
+  <!-- ===== RODAPÉ =====
+       grid: 1 coluna no telemóvel, 2 a partir de sm (640px), 4 a partir de md (768px) -->
+  <footer class="bg-blue-900 text-white text-sm">
+    <div class="max-w-5xl mx-auto px-4 py-8 grid gap-6 sm:grid-cols-2 md:grid-cols-4">
+      <div>
+        <h2 class="font-bold mb-2">AquaGuard</h2>
+        <p>Plataforma que liga entidades formadoras, concessionários e nadadores-salvadores.</p>
+      </div>
+      <nav aria-label="Rodapé">
+        <h2 class="font-bold mb-2">Navegação</h2>
+        <ul>
+          <li><a href="cursos.html" class="hover:underline">Cursos</a></li>
+          <li><a href="praias.html" class="hover:underline">Praias</a></li>
+          <li><a href="contactos.html" class="hover:underline">Contactos</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h2 class="font-bold mb-2">Contactos</h2>
+        <a href="contactos.html" class="hover:underline">Fala connosco</a>
+      </div>
+      <div>
+        <h2 class="font-bold mb-2">Redes sociais</h2>
+        <p>Facebook · Instagram · YouTube</p>
+      </div>
+    </div>
+    <p class="text-center pb-6 text-blue-200">© AquaGuard · Projeto académico</p>
+  </footer>
+
+</body>
+</html>

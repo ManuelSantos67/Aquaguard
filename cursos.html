@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <!-- viewport: faz o telemóvel usar a largura real do ecrã (necessário para a página ser responsiva) -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Cursos de nadador-salvador publicados por entidades formadoras.">
+  <title>AquaGuard | Cursos</title>
+
+  <!-- Tailwind CSS: lê as classes escritas no HTML e gera o CSS no browser (precisa de internet) -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-white text-slate-800">
+
+  <!-- ===== AVISO DE EMERGÊNCIA =====
+       hidden md:inline → o texto extra fica escondido no telemóvel
+       e só aparece a partir dos 768px (md) -->
+  <p class="bg-red-600 text-white text-center text-sm font-semibold px-4 py-2">
+    Em perigo na água? Ligue 112
+    <span class="hidden md:inline">· Nunca entre no mar sozinho nem fora da zona vigiada</span>
+  </p>
+
+  <!-- ===== CABEÇALHO =====
+       sticky top-0 → fica preso no topo quando se faz scroll
+       flex-col (telemóvel): logótipo em cima, menu por baixo
+       md:flex-row md:justify-between (a partir de 768px): logótipo à esquerda, menu à direita -->
+  <header class="sticky top-0 z-10 bg-blue-700 text-white">
+    <div class="max-w-5xl mx-auto px-4 py-3 flex flex-col items-center gap-2 md:flex-row md:justify-between">
+      <a href="index.html" class="text-xl font-bold">AquaGuard</a>
+
+      <nav aria-label="Navegação principal">
+        <ul class="flex gap-4">
+          <li><a href="index.html" class="hover:underline">Início</a></li>
+          <li><a href="cursos.html" aria-current="page" class="font-bold underline">Cursos</a></li>
+          <li><a href="praias.html" class="hover:underline">Praias</a></li>
+          <li><a href="contactos.html" class="hover:underline">Contactos</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===== TÍTULO DA PÁGINA ===== -->
+    <section class="bg-sky-100">
+      <div class="max-w-5xl mx-auto px-4 py-10">
+        <h1 class="text-3xl font-bold text-blue-900">Cursos</h1>
+        <p class="mt-2 max-w-xl">Cursos publicados por entidades formadoras. Escolhe um e contacta a entidade.</p>
+        <!-- href="#publicar" leva à secção que tem id="publicar" (mais abaixo, na mesma página) -->
+        <a href="#publicar" class="inline-block mt-4 text-blue-700 font-semibold underline">És entidade formadora? Publica o teu curso ↓</a>
+      </div>
+    </section>
+
+    <section class="max-w-5xl mx-auto px-4 py-8">
+
+      <p class="bg-amber-100 border border-amber-300 text-sm rounded-lg px-4 py-2 mb-6">
+        Cursos e entidades de exemplo, apenas ilustrativos.
+      </p>
+
+      <!-- Filtros: por agora só a estrutura. Passam a funcionar quando houver JavaScript (E3).
+           flex-wrap: se não couberem numa linha, passam para a seguinte -->
+      <div class="flex flex-wrap gap-2 mb-6">
+        <button type="button" class="bg-blue-700 text-white text-sm font-semibold px-4 py-2 rounded-full">Todos</button>
+        <button type="button" class="bg-white text-blue-700 border border-blue-700 text-sm font-semibold px-4 py-2 rounded-full">Nadador-Salvador</button>
+        <button type="button" class="bg-white text-blue-700 border border-blue-700 text-sm font-semibold px-4 py-2 rounded-full">Meios</button>
+        <button type="button" class="bg-white text-blue-700 border border-blue-700 text-sm font-semibold px-4 py-2 rounded-full">DAE</button>
+      </div>
+
+      <!-- 1 coluna no telemóvel, 2 a partir de sm (640px), 3 a partir de lg (1024px) -->
+      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+
+        <article class="border border-slate-200 rounded-lg overflow-hidden">
+          <div class="h-32 bg-sky-100 flex items-center justify-center text-slate-500">Imagem do curso</div>
+          <div class="p-4">
+            <h3 class="font-bold text-blue-700">Nadador-Salvador</h3>
+            <p class="text-sm">Entidade: Academia Mar Seguro</p>
+            <p class="text-sm text-slate-500">60 h · 350 € · próxima turma 24/11</p>
+            <a href="contactos.html" class="inline-block mt-4 bg-red-600 text-white text-sm font-semibold px-4 py-2 rounded-lg">Contactar entidade</a>
+          </div>
+        </article>
+
+        <article class="border border-slate-200 rounded-lg overflow-hidden">
+          <div class="h-32 bg-sky-100 flex items-center justify-center text-slate-500">Imagem do curso</div>
+          <div class="p-4">
+            <h3 class="font-bold text-blue-700">Nadador-Salvador Coordenador</h3>
+            <p class="text-sm">Entidade: Centro Atlântico de Formação</p>
+            <p class="text-sm text-slate-500">8 h · 60 € · próxima turma 28/11</p>
+            <a href="contactos.html" class="inline-block mt-4 bg-red-600 text-white text-sm font-semibold px-4 py-2 rounded-lg">Contactar entidade</a>
+          </div>
+        </article>
+
+        <article class="border border-slate-200 rounded-lg overflow-hidden">
+          <div class="h-32 bg-sky-100 flex items-center justify-center text-slate-500">Imagem do curso</div>
+          <div class="p-4">
+            <h3 class="font-bold text-blue-700">Nadador-Salvador Formador</h3>
+            <p class="text-sm">Entidade: Academia Mar Seguro</p>
+            <p class="text-sm text-slate-500">40 h · 280 € · próxima turma 05/12</p>
+            <a href="contactos.html" class="inline-block mt-4 bg-red-600 text-white text-sm font-semibold px-4 py-2 rounded-lg">Contactar entidade</a>
+          </div>
+        </article>
+
+        <article class="border border-slate-200 rounded-lg overflow-hidden">
+          <div class="h-32 bg-sky-100 flex items-center justify-center text-slate-500">Imagem do curso</div>
+          <div class="p-4">
+            <h3 class="font-bold text-blue-700">Suporte Básico de Vida e DAE</h3>
+            <p class="text-sm">Entidade: Escola de Salvamento do Sul</p>
+            <p class="text-sm text-slate-500">16 h · 90 € · próxima turma 12/12</p>
+            <a href="contactos.html" class="inline-block mt-4 bg-red-600 text-white text-sm font-semibold px-4 py-2 rounded-lg">Contactar entidade</a>
+          </div>
+        </article>
+
+        <article class="border border-slate-200 rounded-lg overflow-hidden">
+          <div class="h-32 bg-sky-100 flex items-center justify-center text-slate-500">Imagem do curso</div>
+          <div class="p-4">
+            <h3 class="font-bold text-blue-700">Operador de Mota de Salvamento Marítimo (MSM)</h3>
+            <p class="text-sm">Entidade: Associação Onda Viva</p>
+            <p class="text-sm text-slate-500">50 h · 300 € · próxima turma 15/01</p>
+            <a href="contactos.html" class="inline-block mt-4 bg-red-600 text-white text-sm font-semibold px-4 py-2 rounded-lg">Contactar entidade</a>
+          </div>
+        </article>
+
+        <article class="border border-slate-200 rounded-lg overflow-hidden">
+          <div class="h-32 bg-sky-100 flex items-center justify-center text-slate-500">Imagem do curso</div>
+          <div class="p-4">
+            <h3 class="font-bold text-blue-700">Operador de Moto 4x4</h3>
+            <p class="text-sm">Entidade: Instituto Norte Azul</p>
+            <p class="text-sm text-slate-500">12 h · 75 € · próxima turma 22/01</p>
+            <a href="contactos.html" class="inline-block mt-4 bg-red-600 text-white text-sm font-semibold px-4 py-2 rounded-lg">Contactar entidade</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ===== PUBLICAR UM CURSO =====
+         id="publicar" é o destino do link "#publicar" lá de cima.
+         O formulário é igual ao dos Contactos. Por agora só tem a estrutura:
+         guardar o curso na lista fica para a E3 (JavaScript e base de dados).
+         md:grid-cols-2 → campos curtos em 2 colunas a partir de 768px;
+         md:col-span-2 → o campo ocupa as 2 colunas -->
+    <section id="publicar" class="max-w-3xl mx-auto px-4 pb-12">
+      <div class="border border-slate-200 rounded-lg p-6">
+        <h2 class="text-xl font-bold text-blue-700">És entidade formadora? Publica o teu curso</h2>
+        <p class="text-sm text-slate-500 mb-4">Preenche os dados e o curso aparece no catálogo.</p>
+
+        <form action="#" method="post" class="grid gap-4 md:grid-cols-2">
+          <div>
+            <label for="curso" class="block font-semibold mb-1">Nome do curso</label>
+            <input id="curso" name="curso" type="text" required class="w-full border border-slate-300 rounded-lg px-3 py-2">
+          </div>
+          <div>
+            <label for="entidade" class="block font-semibold mb-1">Entidade formadora</label>
+            <input id="entidade" name="entidade" type="text" required class="w-full border border-slate-300 rounded-lg px-3 py-2">
+          </div>
+          <div>
+            <label for="duracao" class="block font-semibold mb-1">Duração (horas)</label>
+            <input id="duracao" name="duracao" type="number" min="1" required class="w-full border border-slate-300 rounded-lg px-3 py-2">
+          </div>
+          <div>
+            <label for="preco" class="block font-semibold mb-1">Preço (€)</label>
+            <input id="preco" name="preco" type="number" min="0" required class="w-full border border-slate-300 rounded-lg px-3 py-2">
+          </div>
+          <div>
+            <label for="local" class="block font-semibold mb-1">Local</label>
+            <input id="local" name="local" type="text" required class="w-full border border-slate-300 rounded-lg px-3 py-2">
+          </div>
+          <div>
+            <label for="data" class="block font-semibold mb-1">Data da próxima turma</label>
+            <input id="data" name="data" type="date" required class="w-full border border-slate-300 rounded-lg px-3 py-2">
+          </div>
+          <div class="md:col-span-2">
+            <label for="descricao" class="block font-semibold mb-1">Descrição</label>
+            <textarea id="descricao" name="descricao" rows="4" class="w-full border border-slate-300 rounded-lg px-3 py-2"></textarea>
+          </div>
+          <div class="md:col-span-2">
+            <button type="submit" class="bg-red-600 text-white font-semibold px-6 py-3 rounded-lg">Publicar curso</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== RODAPÉ =====
+       grid: 1 coluna no telemóvel, 2 a partir de sm (640px), 4 a partir de md (768px) -->
+  <footer class="bg-blue-900 text-white text-sm">
+    <div class="max-w-5xl mx-auto px-4 py-8 grid gap-6 sm:grid-cols-2 md:grid-cols-4">
+      <div>
+        <h2 class="font-bold mb-2">AquaGuard</h2>
+        <p>Plataforma que liga entidades formadoras, concessionários e nadadores-salvadores.</p>
+      </div>
+      <nav aria-label="Rodapé">
+        <h2 class="font-bold mb-2">Navegação</h2>
+        <ul>
+          <li><a href="cursos.html" class="hover:underline">Cursos</a></li>
+          <li><a href="praias.html" class="hover:underline">Praias</a></li>
+          <li><a href="contactos.html" class="hover:underline">Contactos</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h2 class="font-bold mb-2">Contactos</h2>
+        <a href="contactos.html" class="hover:underline">Fala connosco</a>
+      </div>
+      <div>
+        <h2 class="font-bold mb-2">Redes sociais</h2>
+        <p>Facebook · Instagram · YouTube</p>
+      </div>
+    </div>
+    <p class="text-center pb-6 text-blue-200">© AquaGuard · Projeto académico</p>
+  </footer>
+
+</body>
+</html>

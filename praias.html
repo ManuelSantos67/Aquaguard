@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <!-- viewport: faz o telemóvel usar a largura real do ecrã (necessário para a página ser responsiva) -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Praias, nadadores-salvadores, horários e ranking de segurança.">
+  <title>AquaGuard | Praias</title>
+
+  <!-- Tailwind CSS: lê as classes escritas no HTML e gera o CSS no browser (precisa de internet) -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-white text-slate-800">
+
+  <!-- ===== AVISO DE EMERGÊNCIA =====
+       hidden md:inline → o texto extra fica escondido no telemóvel
+       e só aparece a partir dos 768px (md) -->
+  <p class="bg-red-600 text-white text-center text-sm font-semibold px-4 py-2">
+    Em perigo na água? Ligue 112
+    <span class="hidden md:inline">· Nunca entre no mar sozinho nem fora da zona vigiada</span>
+  </p>
+
+  <!-- ===== CABEÇALHO =====
+       sticky top-0 → fica preso no topo quando se faz scroll
+       flex-col (telemóvel): logótipo em cima, menu por baixo
+       md:flex-row md:justify-between (a partir de 768px): logótipo à esquerda, menu à direita -->
+  <header class="sticky top-0 z-10 bg-blue-700 text-white">
+    <div class="max-w-5xl mx-auto px-4 py-3 flex flex-col items-center gap-2 md:flex-row md:justify-between">
+      <a href="index.html" class="text-xl font-bold">AquaGuard</a>
+
+      <nav aria-label="Navegação principal">
+        <ul class="flex gap-4">
+          <li><a href="index.html" class="hover:underline">Início</a></li>
+          <li><a href="cursos.html" class="hover:underline">Cursos</a></li>
+          <li><a href="praias.html" aria-current="page" class="font-bold underline">Praias</a></li>
+          <li><a href="contactos.html" class="hover:underline">Contactos</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===== TÍTULO DA PÁGINA ===== -->
+    <section class="bg-sky-100">
+      <div class="max-w-5xl mx-auto px-4 py-10">
+        <h1 class="text-3xl font-bold text-blue-900">Praias e vigilância</h1>
+        <p class="mt-2 max-w-xl">Onde há nadadores-salvadores, quantos e a que horas.</p>
+      </div>
+    </section>
+
+    <section class="max-w-5xl mx-auto px-4 py-8">
+
+      <!-- Pesquisa e filtro: por agora só a estrutura (a lógica vem na E3).
+           flex-col no telemóvel; sm:flex-row a partir de 640px -->
+      <form action="#" role="search" class="flex flex-col sm:flex-row gap-3 mb-4">
+        <label for="pesquisa" class="sr-only">Pesquisar praia</label>
+        <input id="pesquisa" type="search" placeholder="Nome ou concelho da praia…" class="flex-1 border border-slate-300 rounded-lg px-4 py-2">
+        <label for="regiao" class="sr-only">Região</label>
+        <select id="regiao" class="border border-slate-300 rounded-lg px-4 py-2 bg-white">
+          <option>Região: todas</option>
+          <option>Norte</option>
+          <option>Centro</option>
+          <option>Lisboa e Setúbal</option>
+          <option>Algarve</option>
+        </select>
+      </form>
+
+      <p class="bg-amber-100 border border-amber-300 text-sm rounded-lg px-4 py-2 mb-6">
+        Dados de exemplo, apenas ilustrativos. Fora da época balnear, a maioria das praias não tem nadador-salvador.
+      </p>
+
+      <!-- Lista + mapa:
+           telemóvel: um por baixo do outro; lg (1024px): 3 colunas, a lista ocupa 2 (lg:col-span-2) e o mapa 1 -->
+      <div class="grid gap-6 lg:grid-cols-3">
+
+        <div class="lg:col-span-2 grid gap-4 sm:grid-cols-2">
+
+          <article class="border border-slate-200 rounded-lg p-4">
+            <div class="flex justify-between items-start gap-2">
+              <h3 class="font-bold text-blue-700">Costa da Caparica</h3>
+              <span class="bg-amber-500 text-white text-xs font-bold px-2 py-1 rounded shrink-0">Moderada</span>
+            </div>
+            <p class="text-sm text-slate-500">Almada · Lisboa e Setúbal</p>
+            <ul class="mt-3 flex flex-wrap gap-2 text-xs">
+              <li class="bg-slate-100 rounded px-2 py-1">Mar aberto</li>
+              <li class="bg-sky-100 rounded px-2 py-1">12 nadadores-salvadores</li>
+            </ul>
+            <p class="mt-3 text-sm">Vigiada · 09:00–19:00</p>
+          </article>
+
+          <article class="border border-slate-200 rounded-lg p-4">
+            <div class="flex justify-between items-start gap-2">
+              <h3 class="font-bold text-blue-700">Praia do Guincho</h3>
+              <span class="bg-red-600 text-white text-xs font-bold px-2 py-1 rounded shrink-0">Perigosa</span>
+            </div>
+            <p class="text-sm text-slate-500">Cascais · Lisboa e Setúbal</p>
+            <ul class="mt-3 flex flex-wrap gap-2 text-xs">
+              <li class="bg-slate-100 rounded px-2 py-1">Mar aberto</li>
+              <li class="bg-sky-100 rounded px-2 py-1">5 nadadores-salvadores</li>
+            </ul>
+            <p class="mt-3 text-sm">Vigiada · 09:00–19:00</p>
+          </article>
+
+          <article class="border border-slate-200 rounded-lg p-4">
+            <div class="flex justify-between items-start gap-2">
+              <h3 class="font-bold text-blue-700">Praia Dona Ana</h3>
+              <span class="bg-green-700 text-white text-xs font-bold px-2 py-1 rounded shrink-0">Muito segura</span>
+            </div>
+            <p class="text-sm text-slate-500">Lagos · Algarve</p>
+            <ul class="mt-3 flex flex-wrap gap-2 text-xs">
+              <li class="bg-slate-100 rounded px-2 py-1">Mar aberto</li>
+              <li class="bg-sky-100 rounded px-2 py-1">3 nadadores-salvadores</li>
+            </ul>
+            <p class="mt-3 text-sm">Vigiada · 09:00–19:30</p>
+          </article>
+
+          <article class="border border-slate-200 rounded-lg p-4">
+            <div class="flex justify-between items-start gap-2">
+              <h3 class="font-bold text-blue-700">Praia da Rocha</h3>
+              <span class="bg-green-600 text-white text-xs font-bold px-2 py-1 rounded shrink-0">Segura</span>
+            </div>
+            <p class="text-sm text-slate-500">Portimão · Algarve</p>
+            <ul class="mt-3 flex flex-wrap gap-2 text-xs">
+              <li class="bg-slate-100 rounded px-2 py-1">Mar aberto</li>
+              <li class="bg-sky-100 rounded px-2 py-1">6 nadadores-salvadores</li>
+            </ul>
+            <p class="mt-3 text-sm">Vigiada · 09:00–19:30</p>
+          </article>
+
+          <article class="border border-slate-200 rounded-lg p-4">
+            <div class="flex justify-between items-start gap-2">
+              <h3 class="font-bold text-blue-700">Praia da Conceição</h3>
+              <span class="bg-green-700 text-white text-xs font-bold px-2 py-1 rounded shrink-0">Muito segura</span>
+            </div>
+            <p class="text-sm text-slate-500">Cascais · Lisboa e Setúbal</p>
+            <ul class="mt-3 flex flex-wrap gap-2 text-xs">
+              <li class="bg-slate-100 rounded px-2 py-1">Mar aberto</li>
+              <li class="bg-sky-100 rounded px-2 py-1">4 nadadores-salvadores</li>
+            </ul>
+            <p class="mt-3 text-sm">Vigiada · 09:00–19:00</p>
+          </article>
+
+          <article class="border border-slate-200 rounded-lg p-4">
+            <div class="flex justify-between items-start gap-2">
+              <h3 class="font-bold text-blue-700">Praia da Figueirinha</h3>
+              <span class="bg-green-700 text-white text-xs font-bold px-2 py-1 rounded shrink-0">Muito segura</span>
+            </div>
+            <p class="text-sm text-slate-500">Setúbal · Lisboa e Setúbal</p>
+            <ul class="mt-3 flex flex-wrap gap-2 text-xs">
+              <li class="bg-slate-100 rounded px-2 py-1">Mar aberto</li>
+              <li class="bg-sky-100 rounded px-2 py-1">3 nadadores-salvadores</li>
+            </ul>
+            <p class="mt-3 text-sm">Vigiada · 09:00–19:00</p>
+          </article>
+
+          <article class="border border-slate-200 rounded-lg p-4">
+            <div class="flex justify-between items-start gap-2">
+              <h3 class="font-bold text-blue-700">Supertubos</h3>
+              <span class="bg-red-600 text-white text-xs font-bold px-2 py-1 rounded shrink-0">Perigosa</span>
+            </div>
+            <p class="text-sm text-slate-500">Peniche · Centro</p>
+            <ul class="mt-3 flex flex-wrap gap-2 text-xs">
+              <li class="bg-slate-100 rounded px-2 py-1">Mar aberto</li>
+              <li class="bg-sky-100 rounded px-2 py-1">4 nadadores-salvadores</li>
+            </ul>
+            <p class="mt-3 text-sm">Vigiada · 09:00–19:00</p>
+          </article>
+
+          <article class="border border-slate-200 rounded-lg p-4">
+            <div class="flex justify-between items-start gap-2">
+              <h3 class="font-bold text-blue-700">Praia do Norte</h3>
+              <span class="bg-red-800 text-white text-xs font-bold px-2 py-1 rounded shrink-0">Muito perigosa</span>
+            </div>
+            <p class="text-sm text-slate-500">Nazaré · Centro</p>
+            <ul class="mt-3 flex flex-wrap gap-2 text-xs">
+              <li class="bg-slate-100 rounded px-2 py-1">Mar aberto</li>
+              <li class="bg-sky-100 rounded px-2 py-1">2 nadadores-salvadores</li>
+            </ul>
+            <p class="mt-3 text-sm">Vigiada · 10:00–18:00</p>
+          </article>
+
+        </div>
+
+        <aside class="bg-sky-100 rounded-lg p-4 min-h-64 flex items-center justify-center text-center text-slate-600">
+          Mapa de Portugal (a fazer na E3)
+        </aside>
+      </div>
+    </section>
+
+    <!-- ===== RANKING ===== -->
+    <section class="max-w-5xl mx-auto px-4 pb-10">
+      <h2 class="text-2xl font-bold text-blue-700 text-center mb-6">Ranking de segurança</h2>
+      <!-- Duas listas lado a lado a partir de md (768px) -->
+      <div class="grid gap-6 md:grid-cols-2">
+        <div>
+          <h3 class="font-bold text-green-700 mb-2">Mais seguras</h3>
+          <ul class="space-y-2">
+            <li class="flex justify-between items-center border border-slate-200 rounded px-3 py-2">
+              Praia da Conceição
+              <span class="bg-green-700 text-white text-xs font-bold px-2 py-1 rounded">Muito segura</span>
+            </li>
+            <li class="flex justify-between items-center border border-slate-200 rounded px-3 py-2">
+              Praia da Figueirinha
+              <span class="bg-green-700 text-white text-xs font-bold px-2 py-1 rounded">Muito segura</span>
+            </li>
+            <li class="flex justify-between items-center border border-slate-200 rounded px-3 py-2">
+              Praia Dona Ana
+              <span class="bg-green-700 text-white text-xs font-bold px-2 py-1 rounded">Muito segura</span>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-bold text-red-600 mb-2">Mais perigosas</h3>
+          <ul class="space-y-2">
+            <li class="flex justify-between items-center border border-slate-200 rounded px-3 py-2">
+              Praia do Norte
+              <span class="bg-red-800 text-white text-xs font-bold px-2 py-1 rounded">Muito perigosa</span>
+            </li>
+            <li class="flex justify-between items-center border border-slate-200 rounded px-3 py-2">
+              Supertubos
+              <span class="bg-red-600 text-white text-xs font-bold px-2 py-1 rounded">Perigosa</span>
+            </li>
+            <li class="flex justify-between items-center border border-slate-200 rounded px-3 py-2">
+              Praia do Guincho
+              <span class="bg-red-600 text-white text-xs font-bold px-2 py-1 rounded">Perigosa</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PEDIR VIGILÂNCIA ===== -->
+    <section class="max-w-5xl mx-auto px-4 pb-10">
+      <div class="border border-slate-200 rounded-lg p-6 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+        <div>
+          <h2 class="text-xl font-bold text-blue-700">Precisas de vigilância numa praia?</h2>
+          <p class="text-sm text-slate-500">Pede nadadores-salvadores para praia, piscina, hotel ou evento.</p>
+        </div>
+        <a href="contactos.html" class="bg-red-600 text-white font-semibold text-center px-6 py-3 rounded-lg">Pedir nadadores-salvadores</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== RODAPÉ =====
+       grid: 1 coluna no telemóvel, 2 a partir de sm (640px), 4 a partir de md (768px) -->
+  <footer class="bg-blue-900 text-white text-sm">
+    <div class="max-w-5xl mx-auto px-4 py-8 grid gap-6 sm:grid-cols-2 md:grid-cols-4">
+      <div>
+        <h2 class="font-bold mb-2">AquaGuard</h2>
+        <p>Plataforma que liga entidades formadoras, concessionários e nadadores-salvadores.</p>
+      </div>
+      <nav aria-label="Rodapé">
+        <h2 class="font-bold mb-2">Navegação</h2>
+        <ul>
+          <li><a href="cursos.html" class="hover:underline">Cursos</a></li>
+          <li><a href="praias.html" class="hover:underline">Praias</a></li>
+          <li><a href="contactos.html" class="hover:underline">Contactos</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h2 class="font-bold mb-2">Contactos</h2>
+        <a href="contactos.html" class="hover:underline">Fala connosco</a>
+      </div>
+      <div>
+        <h2 class="font-bold mb-2">Redes sociais</h2>
+        <p>Facebook · Instagram · YouTube</p>
+      </div>
+    </div>
+    <p class="text-center pb-6 text-blue-200">© AquaGuard · Projeto académico</p>
+  </footer>
+
+</body>
+</html>

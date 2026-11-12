@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <!-- viewport: faz o telemóvel usar a largura real do ecrã (necessário para a página ser responsiva) -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AquaGuard: plataforma que liga entidades formadoras, concessionários e nadadores-salvadores.">
+  <title>AquaGuard | Início</title>
+
+  <!-- Tailwind CSS: lê as classes escritas no HTML e gera o CSS no browser (precisa de internet) -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-white text-slate-800">
+
+  <!-- ===== AVISO DE EMERGÊNCIA =====
+       hidden md:inline → o texto extra fica escondido no telemóvel
+       e só aparece a partir dos 768px (md) -->
+  <p class="bg-red-600 text-white text-center text-sm font-semibold px-4 py-2">
+    Em perigo na água? Ligue 112
+    <span class="hidden md:inline">· Nunca entre no mar sozinho nem fora da zona vigiada</span>
+  </p>
+
+  <!-- ===== CABEÇALHO =====
+       sticky top-0 → fica preso no topo quando se faz scroll
+       flex-col (telemóvel): logótipo em cima, menu por baixo
+       md:flex-row md:justify-between (a partir de 768px): logótipo à esquerda, menu à direita -->
+  <header class="sticky top-0 z-10 bg-blue-700 text-white">
+    <div class="max-w-5xl mx-auto px-4 py-3 flex flex-col items-center gap-2 md:flex-row md:justify-between">
+      <a href="index.html" class="text-xl font-bold">AquaGuard</a>
+
+      <nav aria-label="Navegação principal">
+        <ul class="flex gap-4">
+          <li><a href="index.html" aria-current="page" class="font-bold underline">Início</a></li>
+          <li><a href="cursos.html" class="hover:underline">Cursos</a></li>
+          <li><a href="praias.html" class="hover:underline">Praias</a></li>
+          <li><a href="contactos.html" class="hover:underline">Contactos</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===== SECÇÃO PRINCIPAL (hero) =====
+         bg-sky-100 no <section> (fundo na largura toda);
+         o <div> de dentro limita a largura (max-w-5xl) e centra (mx-auto) -->
+    <section class="bg-sky-100">
+      <div class="max-w-5xl mx-auto px-4 py-12 md:py-20">
+        <h1 class="text-3xl md:text-5xl font-bold text-blue-900">Liga quem forma, quem contrata e quem salva vidas.</h1>
+        <p class="mt-4 max-w-xl">Encontra cursos de várias entidades formadoras, consulta praias seguras e perigosas e pede nadadores-salvadores para praias, piscinas, hotéis e eventos.</p>
+
+        <!-- flex-col: botões em coluna no telemóvel; sm:flex-row: lado a lado a partir de 640px -->
+        <div class="mt-6 flex flex-col sm:flex-row gap-3">
+          <a href="cursos.html" class="bg-red-600 text-white font-semibold text-center px-6 py-3 rounded-lg">Ver Cursos</a>
+          <a href="contactos.html" class="bg-white text-blue-700 border-2 border-blue-700 font-semibold text-center px-6 py-3 rounded-lg">Pedir Vigilância</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== NÚMEROS =====
+         grid-cols-2: 2 colunas no telemóvel; md:grid-cols-4: 4 colunas a partir de 768px -->
+    <section class="max-w-5xl mx-auto px-4 py-10">
+      <ul class="grid grid-cols-2 md:grid-cols-4 gap-3 text-center">
+        <li class="bg-blue-900 text-white rounded-lg p-4">
+          <strong class="block text-2xl">5</strong>
+          entidades formadoras
+        </li>
+        <li class="bg-blue-900 text-white rounded-lg p-4">
+          <strong class="block text-2xl">6</strong>
+          cursos publicados
+        </li>
+        <li class="bg-blue-900 text-white rounded-lg p-4">
+          <strong class="block text-2xl">31</strong>
+          praias no mapa
+        </li>
+        <li class="bg-blue-900 text-white rounded-lg p-4">
+          <strong class="block text-2xl">4</strong>
+          tipos de vigilância
+        </li>
+      </ul>
+    </section>
+
+    <!-- ===== 4 PASSOS =====
+         <ol> (lista ordenada) porque a ordem dos passos importa -->
+    <section class="max-w-5xl mx-auto px-4 pb-10">
+      <h2 class="text-2xl font-bold text-blue-700 text-center mb-6">Como funciona em 4 passos</h2>
+      <ol class="grid gap-3 sm:grid-cols-2 md:grid-cols-4 text-center">
+        <li class="border border-slate-200 rounded-lg p-4">
+          <span class="w-8 h-8 mx-auto mb-2 rounded-full bg-red-600 text-white font-bold flex items-center justify-center">1</span>
+          <strong>Escolhe o curso</strong><br>
+          <span class="text-sm text-slate-500">cursos de várias entidades</span>
+        </li>
+        <li class="border border-slate-200 rounded-lg p-4">
+          <span class="w-8 h-8 mx-auto mb-2 rounded-full bg-red-600 text-white font-bold flex items-center justify-center">2</span>
+          <strong>Contacta a entidade</strong><br>
+          <span class="text-sm text-slate-500">dúvidas e inscrição</span>
+        </li>
+        <li class="border border-slate-200 rounded-lg p-4">
+          <span class="w-8 h-8 mx-auto mb-2 rounded-full bg-red-600 text-white font-bold flex items-center justify-center">3</span>
+          <strong>Forma-te</strong><br>
+          <span class="text-sm text-slate-500">piscina e mar</span>
+        </li>
+        <li class="border border-slate-200 rounded-lg p-4">
+          <span class="w-8 h-8 mx-auto mb-2 rounded-full bg-red-600 text-white font-bold flex items-center justify-center">4</span>
+          <strong>Trabalha</strong><br>
+          <span class="text-sm text-slate-500">pedidos de concessionários</span>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ===== CURSOS EM DESTAQUE =====
+         Os 3 cartões são o mesmo bloco com texto diferente.
+         md:grid-cols-3 → 1 coluna no telemóvel, 3 a partir de 768px -->
+    <section class="max-w-5xl mx-auto px-4 pb-10">
+      <h2 class="text-2xl font-bold text-blue-700 text-center mb-6">Cursos em destaque</h2>
+      <div class="grid gap-6 md:grid-cols-3">
+
+        <article class="border border-slate-200 rounded-lg overflow-hidden">
+          <div class="h-32 bg-sky-100 flex items-center justify-center text-slate-500">Imagem do curso</div>
+          <div class="p-4">
+            <h3 class="font-bold text-blue-700">Nadador-Salvador</h3>
+            <p class="text-sm">Entidade: Academia Mar Seguro</p>
+            <p class="text-sm text-slate-500">60 h · 350 € · próxima turma 24/11</p>
+            <a href="contactos.html" class="inline-block mt-4 bg-red-600 text-white text-sm font-semibold px-4 py-2 rounded-lg">Contactar entidade</a>
+          </div>
+        </article>
+
+        <article class="border border-slate-200 rounded-lg overflow-hidden">
+          <div class="h-32 bg-sky-100 flex items-center justify-center text-slate-500">Imagem do curso</div>
+          <div class="p-4">
+            <h3 class="font-bold text-blue-700">Nadador-Salvador Coordenador</h3>
+            <p class="text-sm">Entidade: Centro Atlântico de Formação</p>
+            <p class="text-sm text-slate-500">8 h · 60 € · próxima turma 28/11</p>
+            <a href="contactos.html" class="inline-block mt-4 bg-red-600 text-white text-sm font-semibold px-4 py-2 rounded-lg">Contactar entidade</a>
+          </div>
+        </article>
+
+        <article class="border border-slate-200 rounded-lg overflow-hidden">
+          <div class="h-32 bg-sky-100 flex items-center justify-center text-slate-500">Imagem do curso</div>
+          <div class="p-4">
+            <h3 class="font-bold text-blue-700">Nadador-Salvador Formador</h3>
+            <p class="text-sm">Entidade: Academia Mar Seguro</p>
+            <p class="text-sm text-slate-500">40 h · 280 € · próxima turma 05/12</p>
+            <a href="contactos.html" class="inline-block mt-4 bg-red-600 text-white text-sm font-semibold px-4 py-2 rounded-lg">Contactar entidade</a>
+          </div>
+        </article>
+
+      </div>
+      <p class="text-center mt-6">
+        <a href="cursos.html" class="inline-block border-2 border-blue-700 text-blue-700 font-semibold px-6 py-2 rounded-lg">Ver os 7 cursos →</a>
+      </p>
+    </section>
+
+    <!-- ===== PRAIAS ===== -->
+    <section class="max-w-5xl mx-auto px-4 pb-10">
+      <h2 class="text-2xl font-bold text-blue-700 text-center mb-6">Praias: onde ir e onde ter cuidado</h2>
+      <!-- Duas listas lado a lado a partir de md (768px) -->
+      <div class="grid gap-6 md:grid-cols-2">
+        <div>
+          <h3 class="font-bold text-green-700 mb-2">Mais seguras</h3>
+          <ul class="space-y-2">
+            <li class="flex justify-between items-center border border-slate-200 rounded px-3 py-2">
+              Praia da Conceição
+              <span class="bg-green-700 text-white text-xs font-bold px-2 py-1 rounded">Muito segura</span>
+            </li>
+            <li class="flex justify-between items-center border border-slate-200 rounded px-3 py-2">
+              Praia da Figueirinha
+              <span class="bg-green-700 text-white text-xs font-bold px-2 py-1 rounded">Muito segura</span>
+            </li>
+            <li class="flex justify-between items-center border border-slate-200 rounded px-3 py-2">
+              Praia Dona Ana
+              <span class="bg-green-700 text-white text-xs font-bold px-2 py-1 rounded">Muito segura</span>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-bold text-red-600 mb-2">Mais perigosas</h3>
+          <ul class="space-y-2">
+            <li class="flex justify-between items-center border border-slate-200 rounded px-3 py-2">
+              Praia do Norte
+              <span class="bg-red-800 text-white text-xs font-bold px-2 py-1 rounded">Muito perigosa</span>
+            </li>
+            <li class="flex justify-between items-center border border-slate-200 rounded px-3 py-2">
+              Supertubos
+              <span class="bg-red-600 text-white text-xs font-bold px-2 py-1 rounded">Perigosa</span>
+            </li>
+            <li class="flex justify-between items-center border border-slate-200 rounded px-3 py-2">
+              Praia do Guincho
+              <span class="bg-red-600 text-white text-xs font-bold px-2 py-1 rounded">Perigosa</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <p class="text-center mt-6">
+        <a href="praias.html" class="inline-block bg-sky-500 text-white font-semibold px-8 py-3 rounded-lg">Ver todas as praias</a>
+      </p>
+    </section>
+
+    <!-- ===== VIGILÂNCIA =====
+         grid-cols-2 no telemóvel, md:grid-cols-4 a partir de 768px -->
+    <section class="bg-blue-900 text-white">
+      <div class="max-w-5xl mx-auto px-4 py-10">
+        <h2 class="text-2xl font-bold text-center mb-6">Precisas de nadadores-salvadores?</h2>
+        <ul class="grid grid-cols-2 md:grid-cols-4 gap-3 text-center font-semibold">
+          <li><a href="contactos.html" class="block bg-white text-blue-700 rounded-lg py-5">Praia →</a></li>
+          <li><a href="contactos.html" class="block bg-white text-blue-700 rounded-lg py-5">Piscina →</a></li>
+          <li><a href="contactos.html" class="block bg-white text-blue-700 rounded-lg py-5">Hotel / Resort →</a></li>
+          <li><a href="contactos.html" class="block bg-white text-blue-700 rounded-lg py-5">Evento aquático →</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== PERGUNTAS FREQUENTES =====
+         <details>/<summary>: abre e fecha sozinho, sem JavaScript -->
+    <section class="max-w-2xl mx-auto px-4 py-10">
+      <h2 class="text-2xl font-bold text-blue-700 text-center mb-6">Perguntas frequentes</h2>
+      <div class="space-y-2">
+        <details class="border border-slate-200 rounded px-4 py-3">
+          <summary class="cursor-pointer font-semibold">Quem pode publicar cursos?</summary>
+          <p class="mt-2">Qualquer entidade formadora. A AquaGuard não dá os cursos: liga as entidades a quem quer formar-se.</p>
+        </details>
+        <details class="border border-slate-200 rounded px-4 py-3">
+          <summary class="cursor-pointer font-semibold">Preciso de saber nadar bem?</summary>
+          <p class="mt-2">Depende da entidade formadora. Costuma haver uma prova de admissão na piscina.</p>
+        </details>
+        <details class="border border-slate-200 rounded px-4 py-3">
+          <summary class="cursor-pointer font-semibold">Como é calculado o número de nadadores-salvadores?</summary>
+          <p class="mt-2">Depende da extensão da zona vigiada e do número de banhistas esperado.</p>
+        </details>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== RODAPÉ =====
+       grid: 1 coluna no telemóvel, 2 a partir de sm (640px), 4 a partir de md (768px) -->
+  <footer class="bg-blue-900 text-white text-sm">
+    <div class="max-w-5xl mx-auto px-4 py-8 grid gap-6 sm:grid-cols-2 md:grid-cols-4">
+      <div>
+        <h2 class="font-bold mb-2">AquaGuard</h2>
+        <p>Plataforma que liga entidades formadoras, concessionários e nadadores-salvadores.</p>
+      </div>
+      <nav aria-label="Rodapé">
+        <h2 class="font-bold mb-2">Navegação</h2>
+        <ul>
+          <li><a href="cursos.html" class="hover:underline">Cursos</a></li>
+          <li><a href="praias.html" class="hover:underline">Praias</a></li>
+          <li><a href="contactos.html" class="hover:underline">Contactos</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h2 class="font-bold mb-2">Contactos</h2>
+        <a href="contactos.html" class="hover:underline">Fala connosco</a>
+      </div>
+      <div>
+        <h2 class="font-bold mb-2">Redes sociais</h2>
+        <p>Facebook · Instagram · YouTube</p>
+      </div>
+    </div>
+    <p class="text-center pb-6 text-blue-200">© AquaGuard · Projeto académico</p>
+  </footer>
+
+</body>
+</html>
