@@ -1,6 +1,6 @@
-# AquaGuard: Escola e Associação de Nadadores-Salvadores
+# AquaGuard: plataforma de cursos e vigilância aquática
 
-Website responsivo (mobile e desktop) de uma escola e associação de nadadores-salvadores.
+Website responsivo (mobile e desktop) que liga entidades formadoras, concessionários e nadadores-salvadores.
 Projeto da unidade curricular **Desenvolvimento para a Web**, Licenciatura em Ciência de Dados para a Gestão, 2026/2027.
 
 ## Grupo
@@ -13,30 +13,26 @@ Projeto da unidade curricular **Desenvolvimento para a Web**, Licenciatura em Ci
 
 O site responde a três necessidades:
 
-1. **Tirar um curso**: conhecer os cursos de salvamento aquático e primeiros socorros, ver turmas e vagas e inscrever-se online.
-2. **Pedir nadadores-salvadores**: para praias, piscinas, hotéis e eventos, com sugestão do número de nadadores e orçamento em tempo real.
-3. **Escolher uma praia segura**: consultar nadadores-salvadores, horários, perigos e quais as praias mais seguras e mais perigosas, num mapa de Portugal.
+1. **Encontrar um curso:** entidades formadoras publicam cursos e quem quer formar-se contacta a entidade.
+2. **Pedir nadadores-salvadores:** concessionários de praias, piscinas, hotéis e eventos pedem vigilância.
+3. **Escolher uma praia segura:** consultar vigilância, horários e as praias mais seguras e mais perigosas.
 
 Navegação simples (1 a 3 cliques), menu fixo no topo, logótipo que volta sempre ao Início e botão "Voltar" em todas as subpáginas.
 
 ## Estrutura do website
 
 ```
-Início ................ pesquisa, cursos e praias em destaque, sobre e FAQ
-├── Cursos ............ catálogo, filtros e recomendador de curso
-│    └── Detalhe ...... programa, requisitos, turmas e vagas
-│         └── Inscrição  assistente em 3 passos (turma, dados, pagamento)
-├── Praias ............ mapa de Portugal, filtros e rankings de segurança
-│    └── Detalhe ...... nadadores, horários, perigos e planeador de visita
-├── Serviços de Vigilância  tipos de serviço, preços e calculadora
-│    └── Pedido ....... assistente em 4 passos com orçamento em tempo real
-├── Segurança ......... bandeiras, correntes de retorno, SBV e quiz
-├── Recrutamento ...... vagas, verificador de requisitos e candidatura
-├── Contactos ......... morada, mapa e formulário
-└── A minha área ...... inscrições, pedidos, candidaturas e praias favoritas
+   Início ....... apresentação, cursos em destaque, praias e perguntas frequentes
+   ├── Cursos ... catálogo de cursos e formulário para publicar um curso
+   ├── Praias ... lista de praias, ranking de segurança e pedido de vigilância
+   └── Contactos  formulário de contacto
 ```
 
 ## Funcionalidades
+- menu responsivo;
+- catálogo de cursos;
+- lista de praias com ranking;
+- formulários de contacto e de publicação de curso.
 
 **Básicas**
 - Menu fixo, hambúrguer em mobile, botão "Voltar" em todas as subpáginas.
@@ -46,6 +42,12 @@ Início ................ pesquisa, cursos e praias em destaque, sobre e FAQ
 - Pedido de vigilância em 4 passos com orçamento em tempo real.
 - Candidatura a vagas, formulário de contactos e área pessoal (guardada no navegador).
 
+**Tecnologias**
+HTML5 e Tailwind CSS (versão browser).
+
+**Estado do projeto**
+E1: grupo, descrição e mockups. E2: estrutura em HTML e responsividade (4 páginas). E3 (a fazer): JavaScript, PHP e base de dados.
+
 **Extras**
 - Recomendador de curso, simulador de data/hora de vigilância e planeador de visita à praia.
 - Conteúdos de segurança: bandeiras, corrente de retorno, sinais de afogamento, SBV, checklist e quiz.
@@ -54,6 +56,7 @@ Início ................ pesquisa, cursos e praias em destaque, sobre e FAQ
 - Dados reais das praias (APA/Infopraia), com bandeiras e condições do mar em tempo real.
 - Backend e base de dados, e-mails de confirmação e pagamento online.
 - Praias da Madeira e dos Açores e versão em inglês.
+- Operador de Viatura 4x4 e Embarcações de Pequeno Porte.
 
 ## Esquemas 
 
