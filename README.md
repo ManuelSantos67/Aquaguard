@@ -11,53 +11,50 @@ Projeto da unidade curricular **Desenvolvimento para a Web**, Licenciatura em Ci
 
 ## Para que serve
 
-O site responde a três necessidades:
+O site funciona como um quadro de anúncios organizado, em vez de anúncios espalhados por grupos de redes sociais. Responde a três necessidades:
 
 1. **Encontrar um curso:** entidades formadoras publicam cursos e quem quer formar-se contacta a entidade.
-2. **Pedir nadadores-salvadores:** concessionários de praias, piscinas, hotéis e eventos pedem vigilância.
-3. **Escolher uma praia segura:** consultar vigilância, horários e as praias mais seguras e mais perigosas.
+2. **Encontrar trabalho:** concessionários de praias publicam vagas de nadador-salvador e os nadadores-salvadores candidatam-se.
+3. **Contactar a plataforma:** formulário de contacto para entidades, concessionários e nadadores-salvadores.
 
-Navegação simples (1 a 3 cliques), menu fixo no topo, logótipo que volta sempre ao Início e botão "Voltar" em todas as subpáginas.
+Navegação simples, menu fixo no topo e logótipo que volta sempre ao Início.
 
 ## Estrutura do website
 
 ```
-   Início ....... apresentação, cursos em destaque, praias e perguntas frequentes
-   ├── Cursos ... catálogo de cursos e formulário para publicar um curso
-   ├── Praias ... lista de praias, ranking de segurança e pedido de vigilância
-   └── Contactos  formulário de contacto
+Início ....... apresentação, cursos e vagas em destaque, perguntas frequentes
+├── Cursos ... catálogo de cursos e formulário para publicar um curso
+├── Praias ... vagas de nadador-salvador e formulário para publicar uma vaga
+└── Contactos  formulário de contacto
 ```
 
 ## Funcionalidades
-- menu responsivo;
-- catálogo de cursos;
-- lista de praias com ranking;
-- formulários de contacto e de publicação de curso.
 
-**Básicas**
-- Menu fixo, hambúrguer em mobile, botão "Voltar" em todas as subpáginas.
-- Catálogo de cursos com filtros, detalhe (programa, requisitos, turmas, vagas) e inscrição com validação.
-- Diretório de 31 praias com pesquisa e filtros por região e nível de risco.
-- Mapa de Portugal com praias coloridas por risco e rankings das mais seguras e mais perigosas.
-- Pedido de vigilância em 4 passos com orçamento em tempo real.
-- Candidatura a vagas, formulário de contactos e área pessoal (guardada no navegador).
+- Menu fixo no topo, responsivo (em telemóvel, o logótipo fica por cima do menu).
+- Página Início com apresentação, números, "como funciona", cursos e vagas em destaque e perguntas frequentes.
+- Página Cursos com catálogo de cursos de várias entidades e formulário para publicar um curso.
+- Página Praias com vagas de nadador-salvador de vários concessionários e formulário para publicar uma vaga.
+- Página Contactos com formulário de mensagem.
+- Layout responsivo para telemóvel, tablet e computador.
 
-**Tecnologias**
+**Só o desenho, por agora (fica para a E3):** filtros, pesquisa e o envio dos formulários.
+
+## Tecnologias
+
 HTML5 e Tailwind CSS (versão browser).
 
-**Estado do projeto**
+## Estado do projeto
+
 E1: grupo, descrição e mockups. E2: estrutura em HTML e responsividade (4 páginas). E3 (a fazer): JavaScript, PHP e base de dados.
+
 Após analisar o funcionamento real do mercado, o grupo simplificou o conceito inicial para uma plataforma de anúncios, mais realista e exequível.
 
-**Extras**
-- Recomendador de curso, simulador de data/hora de vigilância e planeador de visita à praia.
-- Conteúdos de segurança: bandeiras, corrente de retorno, sinais de afogamento, SBV, checklist e quiz.
+## Possíveis evoluções
 
-**Possíveis evoluções**
-- Dados reais das praias (APA/Infopraia), com bandeiras e condições do mar em tempo real.
-- Backend e base de dados, e-mails de confirmação e pagamento online.
-- Praias da Madeira e dos Açores e versão em inglês.
-- Operador de Viatura 4x4 e Embarcações de Pequeno Porte.
+- Base de dados e envio real dos formulários (E3).
+- Operador de Viatura 4x4 e Embarcações de Pequeno Porte entre os cursos.
+- Área pessoal, candidatura online e mapa de praias.
+- Dados reais das praias (APA/Infopraia).
 
 ## Esquemas 
 
